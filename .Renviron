@@ -1,0 +1,10 @@
+# example setup file for your local postgres database
+pgserver="localhost"
+pgport=5432
+pgdb="postgres"
+api_user="postgres"
+api_language=1
+pgpassword="admin"
+pgschema="scoreboard"
+sb_version="2.3.1"
+uploadpassword="BML"

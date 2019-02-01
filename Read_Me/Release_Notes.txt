@@ -1,0 +1,140 @@
+#### 2.4 RELEASE NOTES ###########################
+Released on 22 November 2018
+
+Added:
+- Improvement of the Instructions.docx file 
+- Inclusion of 3 dummy datasets, both in txt and RDS. 
+
+
+#### 2.3.1 RELEASE NOTES ###########################
+Released on 13 June 2017
+
+Added:
+- Improvement of the Instructions.docx file explaining how to install the scoreboard application. 
+
+Known issues:
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- Special characters (like accents) seem not to be allowed in the database; please do not use them. 
+
+
+#### 2.3.1 RELEASE NOTES ###########################
+Released on 9 June 2017
+
+Fixed:
+- Minor issues
+
+Added:
+- Possibility to download the guidelines for input score files formatting.
+- Possibility to download the guidelines for score names and the score definitions. 
+- Password protection for the upload of files. 
+
+Known issues:
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- Special characters (like accents) seem not to be allowed in the database; please do not use them. 
+
+
+#### 2.3 RELEASE NOTES ###########################
+Released on 29 May 2017
+
+Fixed: 
+- Deprecated functions from the ggplot2 package were updated. 
+- ggplot2.2.1 seems to solve the issue we had with ggplot2 2.2.0. I did not investigate further. 
+- Uploading of a large number of score files could cause a crash in version 2.2 (more than 16 connections to the database are not allowed, and RPostgreSQL does not disconnect automatically). 
+  This is now fixed by disconnecting and reconnecting after each new uploaded file. 
+- Bug corrected in the Panel plots when multiple Forecast Setups and multiple Score Types are used. 
+- Bugs corrected in the Compare Skill Scores plots. 
+- The dimensions of the pdf downloaded now adapts to the dimensions of the actual plot. 
+- Other bugs corrected. 
+
+Added:
+- Summary of the database in the summary tab. 
+
+Known issues:
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- Special characters (like accents) seem not to be allowed in the database; please do not use them. 
+
+
+#### 2.2 RELEASE NOTES ###########################
+Released on 30 January 2017
+
+Fixed: 
+- The scoreboard version is now correct at the top left of the scoreboard, it is now automatically read from a field in the .Renviron file. 
+- The ui.R code has been modified, there is no more download of the database (it is useless).
+- Known issue solved: when you upload data, you just need to refresh the webpage (press F5). It will update the interface drop down menus. 
+- I fixed a bug in the Compare Skill Scores panel. 
+
+Added:
+- A legend has been added at the Panel plots. It displays the forecast system and setup for labels. 
+- For NA values you can use either -9999. or NA. It will be converted in the database as -9999. I updated the Instructions file accordingly. 
+
+Known issues:
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- One plot gives an error with the last version of ggplot2 (2.2.0) but it works with 2.1.0. I値l solve that later. 
+
+
+#### 2.1 RELEASE NOTES ###########################
+Released on 17 January 2017
+
+Fixed: 
+- Instructions modified: in RDS files, the data must be included in a $data list, not in a $Data list.
+- The code has been modified in order to work when several stations are at the same river.
+- The code has been modified in order to work when LocationIDs are characters. 
+
+Added:
+- Nothing this time! 
+
+Known issues:
+- When you upload data, you need to shut down and restart the scoreboard (see below how to do it) in order to have these data available in the interface. 
+	For the same reason, please do not try to upload twice the same data in the same instance of the scoreboard. I値l try to solve that�
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- One plot gives an error with the last version of ggplot2 (2.2.0) but it works with 2.1.0. I値l solve that later. 
+- To do: include a legend in the tab Panel plots. 
+
+
+
+#### 2.0 RELEASE NOTES ###########################
+Released on 12 January 2017
+
+Fixed: 
+- the ScoreLeadTimeUnit is now added in the database when uploading RDS files.
+- the Compare Skill Scores plot is corrected.
+
+Added:
+- you can now download the last plot. The dimensions of the pdf file created is fixed, so some adjustements may be needed in the future. 
+- you can now upload multiple files in the same time.
+- you can now use several Forecast Setups on each panel of the tab Panel plots. It is useful to compare different initialisations. 
+- a release notes file is now provided (Release_Notes.txt). 
+- a SQL script to clean the database is now provided (cleaning_of_database.sql). Copy the lines of this script in the execute SQL window in postgreSQL and execute to clean the database from all the data without altering the structure. 
+- if not installed, the R packages that the scoreboard needs should now be installed automatically.
+- an installation guide and file format guide is now provided (Instructions.docx).
+
+Known issues:
+- When you upload data, you need to shut down and restart the scoreboard (see below how to do it) in order to have these data available in the interface. 
+	For the same reason, please do not try to upload twice the same data in the same instance of the scoreboard. I値l try to solve that�
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- One plot gives an error with the last version of ggplot2 (2.2.0) but it works with 2.1.0. I値l solve that later. 
+
+
+
+#### 1.0 RELEASE NOTES ###########################
+Released on 9 December 2016
+
+The first version of the database allows for:
+- uploading RDS or txt files under a specific format into a postgreSQL database.
+- plotting a given score for several stations of a given experiment on the same plot (tab Plot).
+- plotting the scores for several stations of a given experiment on panel plots (tab Panel plots).
+- comparing a given score between two experiments for several stations through a skill score (tab Compare Skill Scores).
+
+The guideline for the installation of the scoreboard has been included in an email on 9 December 2016 by G. Thirel. 
+
+Known issues:
+- When you upload data, you need to shut down and restart the scoreboard (see below how to do it) in order to have these data available in the interface. I値l try to solve that�
+- You can download both RDS and txt files in the same DB, but not one after the other in the same scoreboard application occurrence (meaning that you also here need to shut down and restart the application between the two uploads). 
+	Uploading several files of the same type in the same occurrence is ok. 
+- One plot gives an error with the last version of ggplot2 (2.2.0) but it works with 2.1.0. I値l solve that later. 
