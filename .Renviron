@@ -1,7 +1,7 @@
 # example setup file for your local postgres database
 pgserver="localhost"
 pgport=5432
-pgdb="postgres"
+pgdb="imprex"
 api_user="postgres"
 api_language=1
 pgpassword="admin"
