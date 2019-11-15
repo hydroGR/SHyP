@@ -25,18 +25,10 @@ for (tested_package in requested_packages) {
   library(tested_package, character.only = TRUE)
 }
 
-db <- src_postgres(
-  dbname = REdbname,
-  host = REhost,
-  port = REport,
-  user = REuser,
-  password = REpassword
-)
-
 shinyUI(
   fluidPage(
     div(style="float:right",
-        paste("Scoreboard v", sb_version,". Connected to ", db$info$host, " as ", db$info$user, ".", sep = "")
+        paste("Scoreboard v", sb_version,". Connected to ", REdbname, " as ", REuser, ".", sep = "")
     ),
     div(style="padding: 1px 0px; width: '100%'",
         img(src = "imprex.png", height = 100)
