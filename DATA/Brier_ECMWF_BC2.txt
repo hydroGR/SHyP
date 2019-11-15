@@ -3,7 +3,7 @@ CaseStudy;European Rivers
 ForecastSystem;EFAS
 ForecastType;Bias Correction 2
 ModelVariable;Discharge
-ScoreType;CRPS
+ScoreType;Brier Score
 ScoreLeadTimeUnit;Month
 VerificationPeriod;2000/01/01 2010/12/31
 !
