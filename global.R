@@ -1,7 +1,11 @@
-# IMPREX Scoreboard v3 8 Dec. 2016
-# global functions
-# by Guillaume Thirel (Irstea)
-# adapted from a work by Jeffrey Norville (Irstea)
+# SHyP (Scoreboard for Hydrometeorological Predictions) 
+# Scoreboard utility for hydrological and meteorological predictions
+# Created during the H2020 IMPREX project (grant 641811)
+# First version by Jeffrey Norville (Irstea)
+# Further developments and final version by Guillaume Thirel (Irstea)
+# Contact: Guillaume dot Thirel at Irstea dot fr
+# https://github.com/hydroGR/SHyP 
+# Last modification: 15 November 2019
 
 sse <- function(x, series){
   sum((series - x)^2)
