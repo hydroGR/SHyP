@@ -1,3 +1,12 @@
+#### 2.4.1 RELEASE NOTES ###########################
+Released on 18 November 2019
+
+Added:
+- Cleaning of code
+- Improvement of dummy datasets
+- Inclusion of paper for JOSS
+
+
 #### 2.4 RELEASE NOTES ###########################
 Released on 22 November 2018
 
