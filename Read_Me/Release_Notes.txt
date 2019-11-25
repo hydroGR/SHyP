@@ -1,5 +1,5 @@
 #### 2.4.1 RELEASE NOTES ###########################
-Released on 18 November 2019
+Released on 25 November 2019
 
 Added:
 - Cleaning of code

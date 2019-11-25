@@ -53,7 +53,7 @@ The following pages provide instructions for installation on Windows and Linux, 
 - Install R
   - sudo nano /etc/apt/sources.list
   - For Ubuntu16.04, add this line at the end of the file :
-    deb http://cran.univ-paris1.fr/bin/linux/ubuntu xenial/
+    deb http://cran.univ-paris1.fr/bin/linux/ubuntu/xenial/
   - add the public key of the repository
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
   - refresh the list of the repositories
@@ -96,7 +96,7 @@ Users are invited to open the dummy files to better know what to put in. Please 
 - Important notice: some fields must be very carefully filled. Indeed, the database uses some of them to link the different tables of the database. The fields are all the metadata fields (except VerificationPeriod for now) and the LocationID. To illustrate what I am saying, if provider 1 gives CRPSS and provider 2 provides CRPSkillScore, which are basically the same scores, they will not be comparable in the 3rd panel of the scoreboard
 
 
-Cleaning the database
+# Cleaning the database
 - Go to the imprex database and click on “Execute your SQL requests” or “Create script”
 - Open the cleaning_of_database.sql file
 - Execute (with the green arrow or the lightning)
